@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid {
+  width: 60vw;
+  height: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: purple;
+}
+
+.cell {
+  background-color: red;
+  opacity: 0.5;
+  box-shadow: -1px 1px 0px black inset;
+  z-index: 100;
+  width: 20vw;
+  height: 20vw;
+  flex-grow: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-size: 15vw;
+  text-align: center;
+}
+
+.start {
+  margin: 10px;
+  padding: 20px;
+}

@@ -2,7 +2,7 @@ class Board {
     constructor(currentState = ['','','','','','','','','']) {
         this.currentState = currentState;
     }
-    
+   
     printConsoleBoard() {
         let formattedString = '';
         this.currentState.forEach((cell, index) => {
@@ -15,8 +15,10 @@ class Board {
         console.log('%c' + formattedString, 'color: #6d4e42;font-size:16px'); 
     
     //Check states
-    
+
     }
+    
+    
     isEmpty() {
         return this.currentState.every(cell => !cell);
     }
@@ -41,7 +43,6 @@ class Board {
         for(let i = 0; i < winMoves.length; i++) {
             for(let j = 0; j < winCombos.length; j++) {
                 if(winMoves[i] === winCombos[j]) {
-                    console.log(winCombos[j][0] + ' is winner');
                     return {'winner': winCombos[j][0]};
                 } else {
                     continue;
@@ -50,13 +51,31 @@ class Board {
         }
         //Check Draw
         if (this.isFull()) {
-                console.log('Draw');
                 return {'winner': 'draw'};
         }   else {
                 return false;
             } 
         
         
+    };
+
+    insert(player, position) {
+        if(position > 8 || this.currentState[position]) {
+            return false; 
+        } else {
+            this.currentState[position] = player;
+            return true; 
+        }
+
+    }
+    availableMoves() {
+        const moves = [];
+        this.currentState.forEach((cell, index) => {
+            if(!cell) {
+                moves.push(index);
+            }
+        })
+        return moves; 
     }
 
 }
