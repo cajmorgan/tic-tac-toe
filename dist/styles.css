@@ -5,6 +5,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: white;
+  font-family: Monaco;
 }
 
 .grid {
@@ -12,13 +14,15 @@ body {
   height: 60vw;
   display: flex;
   flex-wrap: wrap;
-  background-color: purple;
+  background-color: rgba(123, 123, 123, 0.5);
+  transition-duration: 1s;
+  animation: appear 1s;
 }
 
 .cell {
-  background-color: red;
-  opacity: 0.5;
-  box-shadow: -1px 1px 0px black inset;
+  background-color: transparent;
+  opacity: 1;
+  box-shadow: 0px 0px 10px black inset;
   z-index: 100;
   width: 20vw;
   height: 20vw;
@@ -27,9 +31,50 @@ body {
   cursor: pointer;
   font-size: 15vw;
   text-align: center;
+  transition-duration: 0.5s;
+  animation: appear 1s;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1500px) {
+  .cell {
+    width: 10vw;
+    height: 10vw;
+    font-size: 7.5vw;
+  }
+  .grid {
+    width: 30vw;
+    height: 30vw;
+  }
 }
 
 .start {
   margin: 10px;
   padding: 20px;
+  font-size: 20px;
+  font-family: Monaco;
+  animation: appear 1s;
+}
+
+.title {
+  font-size: 50px;
+  animation: appear 1s;
+}
+
+.title span {
+  margin: 30px;
+}
+
+.X {
+  color: lightblue;
+}
+.O {
+  color: red;
 }
