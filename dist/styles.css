@@ -139,8 +139,11 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .mainTitle {
     display: none;
+  }
+  .title span {
+    right: 0px;
   }
 }
