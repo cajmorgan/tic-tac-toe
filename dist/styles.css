@@ -92,13 +92,13 @@ body {
 .title {
   font-size: 50px;
   animation: appear 1s;
-  right: 20px;
+  right: 15px;
 }
 
 .title span {
   position: relative;
   margin: 30px;
-  right: -10px;
+  right: -15px;
 }
 
 .X {
@@ -112,10 +112,10 @@ body {
 
 .mainTitle {
   position: relative;
-  top: 10px;
+  top: 0;
   margin-bottom: -50px;
   margin-top: -80px;
-  right: 15px;
+  right: 10px;
   background: -webkit-linear-gradient(
     90deg,
     rgb(0, 115, 255) 30%,
