@@ -72,7 +72,7 @@ function playGame(depth = -1, startingPlayer = 1) {
             let cellId = e.target.id; 
             board.currentState[cellId.slice(-1)] = 'x';
             e.target.textContent = 'x';
-            e.target.style.backgroundColor = "lightblue";
+            e.target.style.backgroundColor = "rgb(90, 186, 218)";
             board.printConsoleBoard();
             console.log(board.isTerminal()['winner']);
             if (board.isTerminal().winner == 'draw') {
@@ -139,7 +139,7 @@ function playGame(depth = -1, startingPlayer = 1) {
                                                 if(i % 2 == 0) {
                                                     color = 'orange';
                                                 } else {
-                                                    color = 'green';
+                                                    color = 'limegreen';
                                                 }
                                                 startBtn.addEventListener('click', () => {
                                                     clearInterval(colorLoop);

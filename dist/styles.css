@@ -6,7 +6,28 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: white;
-  font-family: Monaco;
+  font-family: "Amatic SC", cursive;
+  animation: bgLoop 15s infinite;
+}
+@keyframes bgLoop {
+  0% {
+    background-color: white;
+  }
+  20% {
+    background-color: rgb(229, 241, 255);
+  }
+  40% {
+    background-color: rgb(228, 255, 241);
+  }
+  60% {
+    background-color: rgb(251, 255, 226);
+  }
+  80% {
+    background-color: rgb(255, 229, 229);
+  }
+  100% {
+    background-color: white;
+  }
 }
 
 .grid {
@@ -14,9 +35,10 @@ body {
   height: 60vw;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(123, 123, 123, 0.5);
+  background-color: rgba(215, 215, 215, 0.5);
   transition-duration: 1s;
   animation: appear 1s;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.447);
 }
 
 .cell {
@@ -33,6 +55,7 @@ body {
   text-align: center;
   transition-duration: 0.5s;
   animation: appear 1s;
+  color: transparent;
 }
 @keyframes appear {
   from {
@@ -43,7 +66,7 @@ body {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1300px) {
   .cell {
     width: 10vw;
     height: 10vw;
@@ -59,8 +82,11 @@ body {
   margin: 10px;
   padding: 20px;
   font-size: 20px;
-  font-family: Monaco;
+  font-family: "Amatic SC", cursive;
   animation: appear 1s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.515);
 }
 
 .title {
@@ -73,8 +99,37 @@ body {
 }
 
 .X {
-  color: lightblue;
+  color: rgb(90, 186, 218);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.447);
 }
 .O {
   color: red;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.447);
+}
+
+.mainTitle {
+  position: absolute;
+  top: 0px;
+
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(0, 115, 255) 30%,
+    rgb(255, 0, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mainTitle h1 {
+  font-size: 70px;
+}
+.small {
+  position: relative;
+  font-size: 30px;
+  bottom: 140px;
+  left: 0px;
+  transform: rotate(-5deg);
+  font-family: "Sacramento", cursive;
+  background: -webkit-linear-gradient(50deg, rgb(26, 26, 26), rgb(45, 45, 45));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
