@@ -6,7 +6,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: white;
-  font-family: "Amatic SC", cursive;
+  font-family: "Amatic SC", cursive, Arial, Helvetica, sans-serif;
   animation: bgLoop 15s infinite;
 }
 @keyframes bgLoop {
